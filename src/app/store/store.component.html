@@ -1,0 +1,27 @@
+<div class="container mt-2">
+  <div class="row">
+    <div class="col-md-9">
+      <div class="jumbotron">
+        <hr class="my-4">
+        <h1 class="display-4">Music Store to be built</h1>
+        <p class="lead">A place to share and discuss new music with your friends.</p>
+        <hr class="my-4">
+        <div class="d-flex bd-highlight mb-3">
+          <div class="p-2 bd-highlight">
+            <a
+              class="btn btn-primary btn-sm mb-3"
+              style="width: 100px"
+              (click)="onClick('input')"
+              role="button">Add Song</a></div>
+          <div class="p-2 bd-highlight">
+            <a
+              class="btn btn-primary btn-sm"
+              style="width: 100px"
+              (click)="onClick('api')"
+              role="button">API Search</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
