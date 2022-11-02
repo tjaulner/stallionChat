@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Music } from 'src/app/models/music.model';
+import { MusicstoreService } from 'src/app/shared/musicstore.service';
 
 @Component({
   selector: 'app-searchmusic',
@@ -6,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./searchmusic.component.css']
 })
 export class SearchmusicComponent implements OnInit {
+  @Output() searchQuery: EventEmitter<string> = new EventEmitter<string>();
 
-  constructor() { }
+  constructor(private musicService: MusicstoreService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
+
+  onSearchMusic(value) {
+    this.searchQuery.emit(value);
+    this.musicService.clearCache();
+    }
 
 }

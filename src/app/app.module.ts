@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StoreComponent } from './store/store.component';
@@ -11,6 +11,8 @@ import { InputmusicComponent } from './store/inputmusic/inputmusic.component';
 import { SearchmusicComponent } from './store/searchmusic/searchmusic.component';
 import { LoginComponent } from './home/login/login.component';
 import { SignupComponent } from './home/signup/signup.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MusicComponent } from './shared/music/music.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,15 @@ import { SignupComponent } from './home/signup/signup.component';
     InputmusicComponent,
     SearchmusicComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    MusicComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,12 @@
+iTunes URL object results:
+artistName
+artworkUrl100
+trackName
+primaryGenreName
+collectionName
+releaseDate
+kind
+
+10/28/22 - added api for iTunes.
+added musicstore service - this holds the get itunes funcationality
+store component will hold the search results array~!

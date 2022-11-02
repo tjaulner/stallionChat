@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnChanges, EventEmitter, OnInit, Output } from '@angular/core';
+import { MusicstoreService } from '../shared/musicstore.service';
 
 @Component({
   selector: 'app-store',
@@ -7,14 +7,17 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./store.component.css']
 })
 export class StoreComponent implements OnInit {
+  music;
 
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private musicService: MusicstoreService) { }
 
   ngOnInit(): void {
   }
 
-  onClick(name: string){
-    this.router.navigate([name], {relativeTo: this.route});
+  searchSong(value) {
+    this.musicService.musicSearchResults(value).subscribe(music => {
+      this.music = music;
+    })
   }
 
 }

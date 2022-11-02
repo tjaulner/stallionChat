@@ -1,0 +1,40 @@
+<div class="container bg-white rounded-lg mt-3" *ngFor="let musicEl of music?.results; let index = index">
+  <div class="row">
+    <div class="col-md-2 justify-content-center">
+      <div class="border-0 mt-3"><img src="{{musicEl.artworkUrl100}}" alt="{{musicEl.collectionName}}"></div>
+      <button class="btn btn-secondary btn-sm mt-3" type="button" (click)="addSongToLibrary(musicEl)">Add to Library</button>
+
+    </div>
+    <div class="col-md-6 justify-content-start">
+      <div class="card-body">
+        <h5 class="card-title">{{ musicEl.trackName }}</h5>
+        <p class="card-text">{{ musicEl.artistName }}</p>
+        <mat-card-content>
+          <audio controls [id]="index">
+            <source [src]="musicEl.previewUrl" type="audio/ogg">
+            <source [src]="musicEl.previewUrl" type="audio/mpeg">
+            </audio>
+          </mat-card-content>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card-body mt-2">
+        <p class="card-text">Album  |  {{ musicEl.collectionName }}</p>
+        <p class="card-text" style="font-size: 14px;">{{ musicEl.primaryGenreName }} | {{ musicEl.releaseDate | date:'shortDate' }}</p>
+      </div>
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
