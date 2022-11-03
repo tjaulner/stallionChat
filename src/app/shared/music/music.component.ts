@@ -9,26 +9,14 @@ import { Music } from 'src/app/models/music.model';
 export class MusicComponent implements OnInit {
 
   @Input() music;
-  player = new Audio;
-
-  libary = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  playSong(audio) {
-    this.player.src = audio.previewUrl;
-    this.player.play();
-  }
-  stopSong(audio) {
-    this.player.pause();
-  }
 
-  addSongToLibary(music) {
-    this.libary.push(music);
-    console.log(this.libary);
+  addSongToLibary() {
 
   }
 }

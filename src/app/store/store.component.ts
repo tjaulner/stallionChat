@@ -18,6 +18,7 @@ export class StoreComponent implements OnInit {
     this.musicService.musicSearchResults(value).subscribe(music => {
       this.music = music;
     })
+
   }
 
 }

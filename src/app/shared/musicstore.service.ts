@@ -23,7 +23,9 @@ export class MusicstoreService {
       refCount()
     );
     }
+
     return this.musicList;
+
   }
 
   clearCache() {
