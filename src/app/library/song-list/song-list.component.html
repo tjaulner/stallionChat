@@ -3,23 +3,21 @@
     <div class="col-md-2 justify-content-center">
       <div class="border-0 mt-3">
         <img src="{{music.artworkUrl100}}" alt="{{music.collectionName}}">
-      </div>
-      <button
+        <button
       class="btn btn-secondary btn-sm mt-3"
       style="cursor: crosshair"
-      (click)="onSaveSong(music)">Add to Libary</button>
+      (click)="remove(music)"
+      >Remove</button>
+      </div>
     </div>
     <div class="col-md-6 justify-content-start">
       <div class="card-body">
         <h5 class="card-title">{{ music.trackName }}</h5>
         <p class="card-text">{{ music.artistName }}</p>
-
-
           <audio controls>
             <source [src]="music.previewUrl" type="audio/ogg">
             <source [src]="music.previewUrl" type="audio/mpeg">
             </audio>
-
       </div>
     </div>
     <div class="col-md-4">
@@ -32,12 +30,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
