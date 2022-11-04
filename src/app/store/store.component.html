@@ -9,8 +9,8 @@
         </div>
         <hr class="my-4">
           <div class="row display: flex;">
-          <div class="col-md-12">
-            <app-music [music]="music"></app-music>
+          <div class="col-md-12" *ngFor="let musicEl of music?.results">
+            <app-music [music]="musicEl"></app-music>
           </div>
           </div>
       </div>

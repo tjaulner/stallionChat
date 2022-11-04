@@ -15,11 +15,8 @@ export class SearchmusicComponent implements OnInit {
   ngOnInit(): void {}
 
   onSearchMusic(value) {
-    
     this.searchQuery.emit(value);
-
     this.musicService.clearCache();
-
     }
 
 }
