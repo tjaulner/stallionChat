@@ -31,6 +31,12 @@ export class LibraryService {
 
   }
 
+  setMusic(music: Song[]) {
+    this.library = music || [];
+    this.songListChanged.next(this.library.slice());
+
+  }
+
 }
 
 

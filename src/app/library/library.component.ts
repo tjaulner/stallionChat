@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HTTPService } from '../shared/http.service';
 import { LibraryService } from '../shared/libraryservice.service';
 import { Song } from '../shared/music-list';
 
@@ -11,7 +12,7 @@ export class LibraryComponent implements OnInit {
   myLibrary: Song[] = []
   music
 
-  constructor(private libraryService: LibraryService) { }
+  constructor(private libraryService: LibraryService, private httpService: HTTPService) { }
 
   ngOnInit(): void {
     this.myLibrary = this.libraryService.getMusic();
@@ -21,11 +22,15 @@ export class LibraryComponent implements OnInit {
   })
 }
 
-onRemoveSong(idx: number) {
-  this.libraryService.removeSong(idx);
+  saveData() {
+    this.httpService.saveLibarytoFirebase();
+  }
+
+  fetchData() {
+    this.httpService.fetchLibraryFromFirebase();
+  }
 
 
-}
 
 
 }

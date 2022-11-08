@@ -22,7 +22,8 @@ export class SongListComponent implements OnInit {
   }
 
   remove(music) {
-    this.libraryService.removeSong(music);
+    const item = this.libraryService.library.indexOf(music);
+    this.libraryService.removeSong(item);
   }
 
 

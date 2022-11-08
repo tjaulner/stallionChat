@@ -14,6 +14,7 @@ import { SignupComponent } from './home/signup/signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MusicComponent } from './shared/music/music.component';
 import { SongListComponent } from './library/song-list/song-list.component';
+import { EditSongComponent } from './library/edit-song/edit-song.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SongListComponent } from './library/song-list/song-list.component';
     LoginComponent,
     SignupComponent,
     MusicComponent,
-    SongListComponent
+    SongListComponent,
+    EditSongComponent
   ],
   imports: [
     BrowserModule,

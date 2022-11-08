@@ -14,12 +14,14 @@
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-sm">
           </div>
+          <button class="btn btn-secondary btn-sm mr-2" (click)="saveData()" style="cursor: crosshair">Save Data</button>
+          <button class="btn btn-secondary btn-sm" (click)="fetchData()" style="cursor: crosshair">Fetch Data</button>
           </div>
         <hr class="my-4">
       <div>
         <div class="col-md-12" *ngFor="let music of myLibrary; let i = index">
           <app-song-list [music]="music" [idx]="i"></app-song-list>
-          <button class="float-right" style="border: none; font-size: 16px" (click)="onRemoveSong(i)">&minus;</button>
+
         </div>
         <hr class="my-4">
         <div class="p-2 bd-highlight">

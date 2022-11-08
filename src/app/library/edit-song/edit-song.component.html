@@ -1,0 +1,55 @@
+<form [formGroup]="editSongForm" (ngSubmit)="onFormSubmit()">
+  <div>
+    <div class="form-group">
+      <label for="artist">Artist</label>
+      <input
+        type="text"
+        id="artist"
+        name="artist"
+        class="form-control"
+        formControlName="artist"
+      />
+    </div>
+    <div class="form-group">
+      <label for="song">Song</label>
+      <input
+        type="text"
+        id="song"
+        name="song"
+        class="form-control"
+        formControlName="song"
+      />
+    </div>
+    <div class="form-group">
+      <label for="album">Album</label>
+      <input
+        type="text"
+        id="album"
+        name="album"
+        class="form-control"
+        formControlName="album"
+      />
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre</label>
+      <input
+        type="text"
+        id="genre"
+        name="genre"
+        class="form-control"
+        formControlName="genre"
+      />
+    </div>
+    <div class="form-group">
+      <label for="favorite">Favorite?</label>
+      <input
+        type="checkbox"
+        id="favorite"
+        name="favorite"
+        class="form-control"
+        formControlName="isFavorite"
+      />
+    </div>
+    <button class="btn btn-primary btn-sm" type="submit">Save</button>
+  </div>
+</form>
