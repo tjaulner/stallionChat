@@ -8,13 +8,14 @@
           class="form-control"
           #str type="text"
           placeholder="..."
-          (keypress)="onSearchMusic(str.value)"
+          (change)="onSearchMusic(str.value)"
           (blur)="onSearchMusic(str.value)"
           >
-        <button class="btn btn-secondary btn-sm"
+
+      </div>
+      <button class="btn btn-secondary btn-sm mt-4"
         (click)="onSearchMusic(str.value)"
         >Submit</button>
-      </div>
     </div>
 </div>
 
