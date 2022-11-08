@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { HTTPService } from 'src/app/shared/http.service';
 import { LibraryService } from 'src/app/shared/libraryservice.service';
 import { Song } from 'src/app/shared/music-list';
 
@@ -11,7 +12,7 @@ export class SongListComponent implements OnInit {
   myLibrary: Song[] = []
   @Input() music;
 
-  constructor(private libraryService: LibraryService) { }
+  constructor(private libraryService: LibraryService, private http: HTTPService) { }
 
   ngOnInit(): void {
     this.myLibrary = this.libraryService.getMusic();
