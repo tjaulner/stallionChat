@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Music } from '../models/music.model';
 import { Observable } from 'rxjs/internal/Observable';
 import { MusicList } from './music-list';
-import { debounce, debounceTime, distinctUntilChanged, publishReplay, refCount } from 'rxjs/operators';
+import { publishReplay, refCount } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -20,9 +20,7 @@ export class MusicstoreService {
     if (!this.musicList) {
     this.musicList = this.http.get<MusicList[]>(`${this.iTunesUrl}?term=${queryString}`).pipe(
       publishReplay(1),
-      refCount(),
-      debounceTime(1500),
-      distinctUntilChanged()
+      refCount()
     );
     }
 

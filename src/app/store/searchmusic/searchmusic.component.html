@@ -1,22 +1,20 @@
 <div class="p-2 bd-highlight">
     <div class="form-group mr-2">
+      <p>Search for Song or Artist:</p>
       <div class="input-group input-group-sm">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="inputGroup-sizing-sm">Search</span>
+          <button style="cursor:crosshair"
+            type="submit"
+            class="btn btn-secondary"
+            (click)="onSearchMusic(str.value)">Search</button>
         </div>
         <input
           class="form-control"
           #str type="text"
           placeholder="..."
           (change)="onSearchMusic(str.value)"
-          (blur)="onSearchMusic(str.value)"
-          (keyup)="onSearchMusic(str.value)"
           >
-
       </div>
-      <button class="btn btn-secondary btn-sm mt-4"
-        (click)="onSearchMusic(str.value)"
-        >Submit</button>
     </div>
 </div>
 
