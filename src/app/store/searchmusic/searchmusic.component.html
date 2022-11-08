@@ -8,7 +8,7 @@
           class="form-control"
           #str type="text"
           placeholder="..."
-          (keyup.enter)="onSearchMusic(str.value)"
+          (keypress)="onSearchMusic(str.value)"
           (blur)="onSearchMusic(str.value)"
           >
         <button class="btn btn-secondary btn-sm"
