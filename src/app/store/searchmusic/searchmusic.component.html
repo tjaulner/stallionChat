@@ -8,7 +8,9 @@
           class="form-control"
           #str type="text"
           placeholder="..."
-          (keyup.enter)="onSearchMusic(str.value)">
+          (keyup.enter)="onSearchMusic(str.value)"
+          (blur)="onSearchMusic(str.value)"
+          >
       </div>
     </div>
 </div>
