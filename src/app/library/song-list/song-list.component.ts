@@ -25,6 +25,7 @@ export class SongListComponent implements OnInit {
   remove(music) {
     const item = this.libraryService.library.indexOf(music);
     this.libraryService.removeSong(item);
+    this.http.saveLibarytoFirebase();
   }
 
 
