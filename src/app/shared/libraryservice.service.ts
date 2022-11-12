@@ -37,6 +37,18 @@ export class LibraryService {
 
   }
 
+  updateSong(music) {
+    const songRef = this.library.indexOf(music);
+    console.log(songRef);
+    return ( {songRef,  ...music});
+
+
+
+
+  }
+
+
+
 }
 
 

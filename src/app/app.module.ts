@@ -15,6 +15,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MusicComponent } from './shared/music/music.component';
 import { SongListComponent } from './library/song-list/song-list.component';
 import { EditSongComponent } from './library/edit-song/edit-song.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -30,13 +36,21 @@ import { EditSongComponent } from './library/edit-song/edit-song.component';
     MusicComponent,
     SongListComponent,
     EditSongComponent
+
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatCardModule,
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
